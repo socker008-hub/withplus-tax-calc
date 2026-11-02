@@ -1,0 +1,8 @@
+# C:\Users\<윈도우사용자>\.cloudflared\config.yml 로 복사해서 사용
+tunnel: withplus-tax
+credentials-file: C:\Users\<윈도우사용자>\.cloudflared\<터널ID>.json
+
+ingress:
+  - hostname: mcp.withplustax.com
+    service: http://127.0.0.1:8001
+  - service: http_status:404

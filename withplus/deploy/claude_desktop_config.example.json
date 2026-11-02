@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "withplus-tax": {
+      "command": "C:\\Users\\<윈도우사용자>\\.local\\bin\\uv.exe",
+      "args": ["run", "--project", "C:\\withplus-tax-calc\\withplus", "withplus-tax-calc", "--mode", "local"]
+    }
+  }
+}

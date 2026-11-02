@@ -1,0 +1,8 @@
+이 저장소는 Upstage의 korean-tax-calc-mcp(https://github.com/UpstageAI/korean-tax-calc-mcp)를
+포크한 것입니다. 원본 코드(상위 폴더의 korean_tax_calc_mcp/, tests/ 등)는 MIT 라이선스이며
+저작권은 원저작자(Copyright (c) 2026 Upstage)에게 있습니다. 상위 폴더의 LICENSE 파일을 삭제하지 마세요.
+
+withplus/ 폴더는 세무법인 위드플러스가 추가한 운영 래퍼(이름·접속 토큰·공개 모드·사용 로그)이며
+원본 파일을 수정하지 않습니다. 이 폴더도 MIT 라이선스로 배포합니다.
+
+계산 결과는 검토 보조자료이며 세무 자문이 아닙니다.
