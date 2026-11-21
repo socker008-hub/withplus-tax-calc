@@ -55,6 +55,15 @@ AI는 "어떤 도구에 어떤 숫자를 넣을지"만 정하고, 계산은 코�
 인터넷에서 받은 .bat 이라 "Windows의 PC 보호" 창이 뜨면 **추가 정보 → 실행** 을 누릅니다.
 설정 등록만 다시 하려면 `withplus` 폴더에서 `uv run python deploy\register_claude_desktop.py`.
 
+### 직원 PC — 확장 파일(.mcpb) 설치 (무료 요금제 등 설정 파일 방식이 안 될 때)
+
+`withplus-tax-<버전>.mcpb` 파일 하나를 직원에게 보내고, 직원은 **파일을 더블클릭 → Claude Desktop 설치 창에서 설치**만 하면 됩니다.
+Python·패키지는 Claude Desktop이 처음 실행할 때 자동으로 준비합니다(1~2분). 데스크톱 확장은 무료 요금제를 포함한 모든 사용자가 쓸 수 있습니다.
+
+- 만들기(저장소 최상위, Node.js 필요): `python withplus/deploy/build_mcpb.py` → `withplus/dist/withplus-tax-<버전>.mcpb`
+- 업데이트: 원본 업데이트 후 다시 빌드해서 새 .mcpb 를 배포(같은 이름 확장은 덮어써짐)
+- `staff_setup.bat` 으로 이미 등록한 PC에서 둘 다 켜지면 같은 도구가 두 번 보일 수 있으니 하나만 쓰세요.
+
 ## 4. 설치 B — mcp.withplustax.com 으로 외부 공개 (직원·테스트 세무사용)
 
 전제: withplustax.com 이 Cloudflare에 연결되어 있고, 사무실 PC가 켜져 있어야 합니다. 포트 개방(공유기 설정)은 필요 없습니다.
