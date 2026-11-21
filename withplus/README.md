@@ -41,6 +41,20 @@ AI는 "어떤 도구에 어떤 숫자를 넣을지"만 정하고, 계산은 코�
    - Claude Code라면: `claude mcp add withplus-tax -- uv run --project C:\withplus-tax-calc\withplus withplus-tax-calc --mode local`
 6. 확인: Claude에게 "퇴직금 1억 근속 15년 2026년 퇴직 퇴직소득세" → **2,175,000원**, 근속연수공제 27,500,000원이 나오면 정상
 
+### 직원 PC — 원클릭 설치 (`deploy\staff_setup.bat`)
+
+직원에게 `staff_setup.bat` 파일 하나만 보내면 됩니다. 더블클릭하면 아래를 자동으로 합니다.
+
+1. GitHub에서 최신 버전을 내려받아 `%USERPROFILE%\withplus-tax-calc` 에 설치(다시 실행하면 업데이트, `.env` 는 유지)
+2. uv 없으면 설치 → `uv sync`
+3. Claude Desktop이 켜져 있으면 종료할 때까지 대기
+4. Claude Desktop 설정 파일에 `withplus-tax` 등록 — 기존 설정은 그대로 두고, 고치기 전에 `.bak-날짜시각` 백업. 설정 파일 형식이 깨져 있으면 손대지 않고 중단
+5. 계산 테스트(퇴직소득세 2,175,000원)까지 확인
+
+준비물: Claude Desktop 설치·로그인, 인터넷. 관리자 권한은 필요 없습니다.
+인터넷에서 받은 .bat 이라 "Windows의 PC 보호" 창이 뜨면 **추가 정보 → 실행** 을 누릅니다.
+설정 등록만 다시 하려면 `withplus` 폴더에서 `uv run python deploy\register_claude_desktop.py`.
+
 ## 4. 설치 B — mcp.withplustax.com 으로 외부 공개 (직원·테스트 세무사용)
 
 전제: withplustax.com 이 Cloudflare에 연결되어 있고, 사무실 PC가 켜져 있어야 합니다. 포트 개방(공유기 설정)은 필요 없습니다.
